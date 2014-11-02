@@ -1,0 +1,30 @@
+a{text-decoration:none}
+a:link{color:#FFFFFF}
+a:visited{color:#FFFFFF}
+a:hover{color:#C8C8C8}
+a:active{color:#3388FF}
+div.head
+{
+width:1300px;
+height:128px;
+background-color:#3388FF;
+box-shadow: 0px 6px 0px #858585;
+}
+div.footer
+{
+width:1300px;
+height:40px;
+background-color:#3388FF;
+box-shadow: 0px -6px 0px #858585;
+}
+div.title{font-family:"微软雅黑";font-size:48px;font-weight:bold;color:white;display:inline}
+div.subtitle{font-family:"黑体";font-size:15px;font-weight:bold;color:white;display:inline}
+div.line{line-height:80%}
+div.menu{font-family:"微软雅黑";font-size:18px;font-weight:bold;color:white;display:inline}
+div.about{font-family:"宋体";font-size:13px;font-weight:bold;color:white;line-height:0%;display:inline}
+div.center{margin-left:auto;margin-right:auto;display:inline}
+div.iframetitle{font-family:"微软雅黑";font-size:24px;font-weight:bold;display:inline}
+div.iframesubtitle{font-family:"宋体";font-size:16px;font-weight:bold;display:inline}
+div.iframedescription{font-family:"微软雅黑";font-size:16px;display:inline}
+div.iframefooter{font-family:"宋体";font-size:13px;font-weight:bold;display:inline}
+div.iframebox{width:200px;height:60px;font-family:"微软雅黑";font-size:16px;font-weight:bold;background-color:#3388FF}

@@ -1,0 +1,15 @@
+a{text-decoration:none}
+a:link{color:#3388FF}
+a:visited{color:#3388FF}
+a:hover{color:#C8C8C8}
+a:active{color:#FFFFFF}
+div.title{font-family:"Old English Text MT";font-size:48px;font-weight:bold;color:white;display:inline}
+div.subtitle{font-family:"黑体";font-size:15px;font-weight:bold;color:white;display:inline}
+div.line{line-height:80%}
+div.menu{font-family:"微软雅黑";font-size:18px;font-weight:bold;color:white;display:inline}
+div.about{font-family:"宋体";font-size:13px;font-weight:bold;color:white;line-height:0%;display:inline}
+div.center{margin-left:auto;margin-right:auto;display:inline}
+div.iframetitle{font-family:"微软雅黑";font-size:24px;font-weight:bold;display:inline}
+div.iframesubtitle{font-family:"黑体";font-size:18px;font-weight:bold;display:inline}
+div.iframedescription{font-family:"微软雅黑";font-size:14px;display:inline}
+div.iframefooter{font-family:"微软雅黑";font-size:15px;font-weight:bold;display:inline;display:inline}
