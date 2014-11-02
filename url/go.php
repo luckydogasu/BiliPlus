@@ -1,16 +1,8 @@
 <?php
 if ($_SERVER['HTTPS']!='on')
 	{
-	$xredir='https://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+	$xredir='https://'.$_SERVER["HTTP_HOST"].$_SERVER['REQUEST_URI'];
 	header('Location: '.$xredir);
-	exit();
-	}
-?>
-<?php
-$referrer = parse_url($_SERVER['HTTP_REFERER']);
-if (!empty($referrer['host'])&&$referrer['host']!='www.bilicloud.com')
-	{
-	header('Location: http://www.bilicloud.com');
 	exit();
 	}
 ?>
@@ -29,8 +21,8 @@ else
 	}
 ?>
 
-<link rel="stylesheet" href="https://biliplus.sinaapp.com/style/iframe.css?no_rewrite=true" type="text/css">
-<link rel="shortcut icon" href="https://biliplus.sinaapp.com/favicon.ico?no_rewrite=true" />
+<link rel="stylesheet" href="/style/iframe.css" type="text/css">
+<link rel="shortcut icon" href="/favicon.ico" />
 <title>次元跳转 - BiliPlus - ( ゜- ゜)つロ 乾杯~</title>
 </head>
 <body>

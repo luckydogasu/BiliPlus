@@ -341,7 +341,7 @@ else
                                         $pagelist = '';
                                         while (isset($info['list'][$p]['cid']))
                                             {
-                                            $pagelist = $pagelist.'<a href="/api/do.php?act=info&av='.$_GET["av"].'&page='.$info['list'][$p]['page'].'&type='.$_GET["type"].'"><div class="listbox">[P'.($p+1).'] '.$info['list'][$p]['part'].'</div></a>';
+                                            $pagelist = $pagelist.'<a href="/api/do.php?act=info&av='.$_GET["av"].'&page='.$info['list'][$p]['page'].'"><div class="listbox">[P'.($p+1).'] '.$info['list'][$p]['part'].'</div></a>';
                                             $p++;
                                             }
                                         if (!isset($play['durl'][0]['url']))
@@ -359,15 +359,15 @@ else
                                             $partlengthms = $play['durl'][$part]['length'];
                                             $partlength = str_pad(floor($partlengthms/60000),2,"0", STR_PAD_LEFT).':'.sprintf("%02d",round(fmod(($partlengthms/1000),60),3));
                                             $urlencode1 = urlencode($play['durl'][$part]['url']);
-                                            $parturl = 'https://biliplus.sinaapp.com/url/go.php?no_rewrite=true&url='.$urlencode1;
+                                            $parturl = 'https://'.$_SERVER["HTTP_HOST"].'/url/go.php?url='.$urlencode1;
                                             $video = $video.'<a href="'.$parturl.'" target="_blank" title="[分段'.($part+1).'] 时长：'.$partlength.'"><div class="filelist">[分段'.($part+1).'] '.$partlength.'</div></a>';
                                             $part++;
                                             }
                                         $urlencode2 = urlencode($apijson['MP3']);
-                                        $audiomp3 = 'https://biliplus.sinaapp.com/url/go.php?no_rewrite=true&url='.$urlencode2;
+                                        $audiomp3 = 'https://'.$_SERVER["HTTP_HOST"].'/url/go.php?url='.$urlencode2;
                                         $getmp4 = json_decode($apijson['MP4'],true);
                                         $urlencode3 = urlencode($getmp4['src']);
-                                        $videomp4 = 'https://biliplus.sinaapp.com/url/go.php?no_rewrite=true&url='.$urlencode3;
+                                        $videomp4 = 'https://'.$_SERVER["HTTP_HOST"].'/url/go.php?url='.$urlencode3;
                                         $pages = $info['pages'];
                                         $from_real = $play['from'];
                                         $from_src = $info['list'][($page-1)]['type'];
@@ -406,8 +406,8 @@ else
                                         $videocoin = $info['coins'];
                                         $videofavorite = $info['favorites'];
                                         $videotime = $info['created_at'];
-                                        $danmakuxml = 'https://biliplus.sinaapp.com/url/go.php?no_rewrite=true&url='.urlencode('http://www.bilibilijj.com/ashx/Barrage.ashx?f=true&s=xml&av=&p=&cid='.$cid.'&n='.$videotitle);
-                                        $danmakuass = 'https://biliplus.sinaapp.com/url/go.php?no_rewrite=true&url='.urlencode('http://www.bilibilijj.com/ashx/Barrage.ashx?f=true&s=ass&av=&p=&cid='.$cid.'&n='.$videotitle);
+                                        $danmakuxml = 'https://'.$_SERVER["HTTP_HOST"].'/url/go.php?url='.urlencode('http://www.bilibilijj.com/ashx/Barrage.ashx?f=true&s=xml&av=&p=&cid='.$cid.'&n='.$videotitle);
+                                        $danmakuass = 'https://'.$_SERVER["HTTP_HOST"].'/url/go.php?url='.urlencode('http://www.bilibilijj.com/ashx/Barrage.ashx?f=true&s=ass&av=&p=&cid='.$cid.'&n='.$videotitle);
                                         $title = $videotitle.' - AV'.$_GET["av"].' - 下载';
                                         }
                                     else
